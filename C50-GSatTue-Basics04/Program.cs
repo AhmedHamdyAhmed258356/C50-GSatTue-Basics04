@@ -58,9 +58,22 @@ namespace C50_GSatTue_Basics04
             #region Q8
             //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
             // new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length afterward
-            double[] array = { 25.0, 40.0 };
-            ReplaceArray(ref array);
-            Console.WriteLine(array.Length);
+            //double[] array = { 25.0, 40.0 };
+            //ReplaceArray(ref array);
+            //Console.WriteLine(array.Length);
+            #endregion
+            #region Q9
+            //Write a method bool TryGetPrice(string title, out double price) that returns true and sets
+            //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it and print the price if found
+            if (TryGetPrice("Clean Code", out double cleanCodePrice))
+            {
+                Console.WriteLine(cleanCodePrice);
+            }
+
+            if (TryGetPrice("Refactoring", out double refactoringPrice))
+            {
+                Console.WriteLine(refactoringPrice);
+            }
             #endregion
         }
 
@@ -96,9 +109,21 @@ namespace C50_GSatTue_Basics04
         //}
         #endregion
         #region Q8
-        static void ReplaceArray(ref double[] prices)
+        //static void ReplaceArray(ref double[] prices)
+        //{
+        //   prices=new double[] { 10.0, 12.5, 15.0 } ;
+        //}
+        #endregion
+        #region Q9
+        static bool TryGetPrice(string bookTitle, out double bookPrice)
         {
-           prices=new double[] { 10.0, 12.5, 15.0 } ;
+            if (bookTitle == "Clean Code")
+            {
+                bookPrice = 25.5;
+                return true;
+            }
+            bookPrice = 0;
+            return false;
         }
         #endregion
         #endregion
