@@ -65,15 +65,21 @@ namespace C50_GSatTue_Basics04
             #region Q9
             //Write a method bool TryGetPrice(string title, out double price) that returns true and sets
             //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it and print the price if found
-            if (TryGetPrice("Clean Code", out double cleanCodePrice))
-            {
-                Console.WriteLine(cleanCodePrice);
-            }
+            //if (TryGetPrice("Clean Code", out double cleanCodePrice))
+            //{
+            //    Console.WriteLine(cleanCodePrice);
+            //}
 
-            if (TryGetPrice("Refactoring", out double refactoringPrice))
-            {
-                Console.WriteLine(refactoringPrice);
-            }
+            //if (TryGetPrice("Refactoring", out double refactoringPrice))
+            //{
+            //    Console.WriteLine(refactoringPrice);
+            //}
+            #endregion
+            #region Q10
+            //Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call
+            // it once with only a title, and once passing both a title and pages
+            PrintBookInfo("Clean Code");
+            PrintBookInfo("Num of  a new pages", 616);
             #endregion
         }
 
@@ -115,15 +121,21 @@ namespace C50_GSatTue_Basics04
         //}
         #endregion
         #region Q9
-        static bool TryGetPrice(string bookTitle, out double bookPrice)
+        //static bool TryGetPrice(string bookTitle, out double bookPrice)
+        //{
+        //    if (bookTitle == "Clean Code")
+        //    {
+        //        bookPrice = 25.5;
+        //        return true;
+        //    }
+        //    bookPrice = 0;
+        //    return false;
+        //}
+        #endregion
+        #region Q10
+        static void PrintBookInfo(string bookTitle, int pageCount = 300)
         {
-            if (bookTitle == "Clean Code")
-            {
-                bookPrice = 25.5;
-                return true;
-            }
-            bookPrice = 0;
-            return false;
+            Console.WriteLine($"{bookTitle} , {pageCount} pages");
         }
         #endregion
         #endregion
