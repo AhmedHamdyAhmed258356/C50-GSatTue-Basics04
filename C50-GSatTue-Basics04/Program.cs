@@ -85,8 +85,13 @@ namespace C50_GSatTue_Basics04
             #region Q11
             //Using the PrintBookInfo method from the question above, call it by naming the
             //parameters, passing pages before title.
-            
-            PrintBookInfo(pageCount: 301, bookTitle: "The Pragmatic Programmer");
+
+            //PrintBookInfo(pageCount: 301, bookTitle: "The Pragmatic Programmer");
+            #endregion
+            #region Q12
+            //Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+            //Call it with three book titles.
+            PrintAllTitles("Clean Code", "Refactoring", "Domain-Driven Design");
             #endregion
         }
 
@@ -146,9 +151,18 @@ namespace C50_GSatTue_Basics04
         //}
         #endregion
         #region Q11
-        static void PrintBookInfo(string bookTitle, int pageCount = 300)
+        //static void PrintBookInfo(string bookTitle, int pageCount = 300)
+        //{
+        //    Console.WriteLine($"{bookTitle} , {pageCount} pages");
+        //}
+        #endregion
+        #region Q12
+        static void PrintAllTitles(params string[] bookTitles)
         {
-            Console.WriteLine($"{bookTitle} , {pageCount} pages");
+            foreach (string bookTitle in bookTitles)
+            {
+                Console.WriteLine(bookTitle);
+            }
         }
         #endregion
         #endregion
