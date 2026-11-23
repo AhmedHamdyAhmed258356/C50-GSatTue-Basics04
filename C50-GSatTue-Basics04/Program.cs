@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Drawing;
+using System.Runtime.InteropServices;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace C50_GSatTue_Basics04
@@ -49,10 +50,17 @@ namespace C50_GSatTue_Basics04
             #region Q7
             //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
             // Call it and print pages afterward. How is the result different from question 5 ?
-            int pages = 400;
-            AddBonusPagesByRef(ref pages);
-            Console.WriteLine(pages); //printed= 450; why Because ref passed pades br reference//
-                                   //,so AddBonusPagesByRef modifies the original variable directly instead of a copy
+            //int pages = 400;
+            //AddBonusPagesByRef(ref pages);
+            //Console.WriteLine(pages); //printed= 450; why Because ref passed pades br reference//
+            //,so AddBonusPagesByRef modifies the original variable directly instead of a copy
+            #endregion
+            #region Q8
+            //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+            // new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length afterward
+            double[] array = { 25.0, 40.0 };
+            ReplaceArray(ref array);
+            Console.WriteLine(array.Length);
             #endregion
         }
 
@@ -82,9 +90,15 @@ namespace C50_GSatTue_Basics04
         //}
         #endregion
         #region Q7
-        static void AddBonusPagesByRef(ref int pages)
+        //static void AddBonusPagesByRef(ref int pages)
+        //{
+        //    pages += 50;
+        //}
+        #endregion
+        #region Q8
+        static void ReplaceArray(ref double[] prices)
         {
-            pages += 50;
+           prices=new double[] { 10.0, 12.5, 15.0 } ;
         }
         #endregion
         #endregion
