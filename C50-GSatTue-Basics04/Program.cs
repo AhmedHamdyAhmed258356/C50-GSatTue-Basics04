@@ -27,7 +27,15 @@ namespace C50_GSatTue_Basics04
             #region Q4
             //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
             // "Clean Code"
-            PrintBookTitle("clean code");
+            // PrintBookTitle("clean code");
+            #endregion
+            #region Q5
+            //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+            //int pages = 400; and print pages afterward. What do you expect to see, and why?
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages); //printed=400 : why??=  Because int is a value type passed by value
+                                //,AddBonusPages only modifies a copy of bages and leaving the original variable in main
             #endregion
         }
 
@@ -39,8 +47,15 @@ namespace C50_GSatTue_Basics04
         //    }
         #endregion
         #region Q4
-        static void PrintBookTitle(string BookTitle) {
-            Console.WriteLine("Book title:"+BookTitle); 
+        //static void PrintBookTitle(string BookTitle) {
+        //    Console.WriteLine("Book title:"+BookTitle); 
+        //}
+        #endregion
+        #region Q5
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
+            Console.WriteLine();
         }
         #endregion
         #endregion
