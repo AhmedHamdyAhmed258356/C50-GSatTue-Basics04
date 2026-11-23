@@ -41,10 +41,18 @@ namespace C50_GSatTue_Basics04
             //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
             //ith double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
             //see, and why?
-            double[] prices = { 25.5, 40.0 };
-            ApplyDiscount(prices);
-            Console.WriteLine(prices[0]); //printed=20.5 why?? Because arrays are reference type
-                             //,so modifiying index 0 inside the method updatesoriginal array in memory
+            //double[] prices = { 25.5, 40.0 };
+            //ApplyDiscount(prices);
+            //Console.WriteLine(prices[0]); //printed=20.5 why?? Because arrays are reference type
+            //,so modifiying index 0 inside the method updatesoriginal array in memory
+            #endregion
+            #region Q7
+            //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+            // Call it and print pages afterward. How is the result different from question 5 ?
+            int pages = 400;
+            AddBonusPagesByRef(ref pages);
+            Console.WriteLine(pages); //printed= 450; why Because ref passed pades br reference//
+                                   //,so AddBonusPagesByRef modifies the original variable directly instead of a copy
             #endregion
         }
 
@@ -68,9 +76,15 @@ namespace C50_GSatTue_Basics04
         //}
         #endregion
         #region Q6
-        static void ApplyDiscount(double[] prices)
+        //static void ApplyDiscount(double[] prices)
+        //{
+        //    prices[0] -= 5;
+        //}
+        #endregion
+        #region Q7
+        static void AddBonusPagesByRef(ref int pages)
         {
-            prices[0] -= 5;
+            pages += 50;
         }
         #endregion
         #endregion
