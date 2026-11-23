@@ -22,15 +22,25 @@ namespace C50_GSatTue_Basics04
             #region Q3
             //Write a method called PrintWelcomeMessage that takes no parameters and prints
             //Welcome to the Library!".Call it from Main.
-            printwelcomemessage();
+            // printwelcomemessage();
+            #endregion
+            #region Q4
+            //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
+            // "Clean Code"
+            PrintBookTitle("clean code");
             #endregion
         }
-    
-    #region functions
-    #region Q3
-    static void printwelcomemessage()
-        {
-            Console.WriteLine("welcome to the library!");
+
+        #region functions
+        #region Q3
+        //static void printwelcomemessage()
+        //    {
+        //        Console.WriteLine("welcome to the library!");
+        //    }
+        #endregion
+        #region Q4
+        static void PrintBookTitle(string BookTitle) {
+            Console.WriteLine("Book title:"+BookTitle); 
         }
         #endregion
         #endregion
