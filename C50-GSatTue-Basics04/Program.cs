@@ -32,10 +32,19 @@ namespace C50_GSatTue_Basics04
             #region Q5
             //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
             //int pages = 400; and print pages afterward. What do you expect to see, and why?
-            int pages = 400;
-            AddBonusPages(pages);
-            Console.WriteLine(pages); //printed=400 : why??=  Because int is a value type passed by value
-                                //,AddBonusPages only modifies a copy of bages and leaving the original variable in main
+            //int pages = 400;
+            //AddBonusPages(pages);
+            //Console.WriteLine(pages); //printed=400 : why??=  Because int is a value type passed by value
+            //,AddBonusPages only modifies a copy of bages and leaving the original variable in main
+            #endregion
+            #region Q6
+            //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
+            //ith double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+            //see, and why?
+            double[] prices = { 25.5, 40.0 };
+            ApplyDiscount(prices);
+            Console.WriteLine(prices[0]); //printed=20.5 why?? Because arrays are reference type
+                             //,so modifiying index 0 inside the method updatesoriginal array in memory
             #endregion
         }
 
@@ -52,10 +61,16 @@ namespace C50_GSatTue_Basics04
         //}
         #endregion
         #region Q5
-        static void AddBonusPages(int pages)
+        //static void AddBonusPages(int pages)
+        //{
+        //    pages += 50;
+        //    Console.WriteLine();
+        //}
+        #endregion
+        #region Q6
+        static void ApplyDiscount(double[] prices)
         {
-            pages += 50;
-            Console.WriteLine();
+            prices[0] -= 5;
         }
         #endregion
         #endregion
